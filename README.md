@@ -5,7 +5,7 @@ Simple wrapper around System.Management.Automation.dll for python.
 The following code prints the output of "get-process | select-object -property name" powershell command
 
 <pre>
-import PyPS
+from PyPS import run_ps_inline
 print(run_ps_inline("get-process | select-object -property name"))
 </pre>
 
