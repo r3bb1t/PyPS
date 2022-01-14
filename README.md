@@ -1,5 +1,5 @@
 # PyPS
-Simple wrapper around System.Management.Automation.dll for python.
+Simple wrapper around the System.Management.Automation.dll for python.
 
 ## Example Usage:
 The following code prints the output of "get-process | select-object -property name" powershell command
