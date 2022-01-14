@@ -1,11 +1,12 @@
 # PyPS
 Simple wrapper around System.Management.Automation.dll for python.
 
-# Example Usage:
+## Example Usage:
+The following code prints the output of "get-process | select-object -property name" powershell command
 
 <pre>
 import PyPS
-print(run_ps_inline("get-process | select-object -property name"))  # prints output of "get-process | select-object -property name" powershell command
+print(run_ps_inline("get-process | select-object -property name"))
 </pre>
 
 
