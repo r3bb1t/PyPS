@@ -6,7 +6,7 @@ The following code prints the output of "get-process | select-object -property n
 
 <pre>
 from PyPS import run_ps_inline
-print(run_ps_inline("get-process | select-object -property name"))
+print(run_ps("get-process | select-object -property name"))
 </pre>
 
 
