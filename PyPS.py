@@ -17,7 +17,6 @@ from System.Text import *
 
 
 
-
 def run_ps_inline(cmd):
     runspace = RunspaceFactory.CreateRunspace()
     runspace.Open()
@@ -44,10 +43,9 @@ def run_ps_inline(cmd):
 def run_ps_script(script):
     run_ps_inline(script.replace('\n', ';'))
 
-
-cmd = "get-process | select-object -property name"
-
-
-result = run_ps_inline(cmd)  # Enter your command here
-
-print(result)
+    
+if __name__ == '__main__':
+    
+    result = run_ps_inline(cmd)  # Enter your command here
+    
+    print(result)
