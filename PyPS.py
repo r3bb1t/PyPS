@@ -21,7 +21,7 @@ from System.Text import *
 def run_ps_inline(cmd):
     runspace = RunspaceFactory.CreateRunspace()
     runspace.Open()
-    scriptInvoker = RunspaceInvoke(runspace)
+    RunspaceInvoke(runspace)
 
     pipeline = runspace.CreatePipeline()
     pipeline.Commands.AddScript(cmd)
@@ -40,6 +40,9 @@ def run_ps_inline(cmd):
 
 
     return stringBuilder.ToString()
+
+def run_ps_script(script):
+    run_ps_inline(script.replace('\n', ';'))
 
 
 cmd = "get-process | select-object -property name"
