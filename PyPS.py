@@ -9,10 +9,10 @@ clr.AddReference("System.Management.Automation")
 clr.AddReference('System.Collections')
 clr.AddReference('System.Management')
 
-from System.Collections.ObjectModel import *
-from System.Management.Automation import *
-from System.Management.Automation.Runspaces import *
-from System.Text import *
+
+from System.Management.Automation import RunspaceInvoke
+from System.Management.Automation.Runspaces import RunspaceFactory
+from System.Text import StringBuilder
 
 
 
@@ -45,7 +45,6 @@ def run_ps_script(script):
 
     
 if __name__ == '__main__':
-    
+    cmd = "get-process | select-object -property name"
     result = run_ps_inline(cmd)  # Enter your command here
-    
     print(result)
